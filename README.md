@@ -5,4 +5,7 @@
 ```bash
 tar xvf node...tar
 ln -s node-v16... node
+
+mkdir back
+npm ins
 ```
