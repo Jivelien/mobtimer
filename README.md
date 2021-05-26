@@ -7,5 +7,6 @@ tar xvf node...tar
 ln -s node-v16... node
 
 mkdir back
-npm ins
+cd back
+npm install typescript --save-dev
 ```
