@@ -21,3 +21,25 @@ tsc --esModuleInterop mobtimer.ts
 ## Resources utilisées
 
 - https://developer.okta.com/blog/2019/05/07/nodejs-typescript-api
+
+resource que j'ai lu, intéressante également et express fonctionne avec typescript
+https://blog.logrocket.com/typescript-with-node-js-and-express/
+En utilisant cette séquence de commandes :
+
+```bash 
+npm init
+npm install -g npm@7.15.1
+npm install --save-dev typescript tslint @types/node
+subl tslint.json
+subl tslint.json
+mkdir src
+subl src/index.ts
+./node_modules/.bin/tsc
+node ./dist/index.js
+npm install express
+npm --save-dev install @types/node @types/express
+subl src/try_express.ts
+./node_modules/.bin/tsc
+node dist/src/try_express.js
+⚡️[server]: Server is running at https://localhost:8000
+```
