@@ -7,5 +7,10 @@ tar xvf node...tar
 ln -s node-v16... node
 
 cd back
-npm install
+npm install typescript@4.2.4
+npm install express@4.17.1
+npm install @types/express@4.17.1
+
+# npm install --save-dev ts-node-dev@1.0.0-pre.44 tslint@6.1.2 @types/node@14.0.5 
+
 ```
