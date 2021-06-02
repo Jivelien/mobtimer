@@ -43,3 +43,39 @@ subl src/try_express.ts
 node dist/src/try_express.js
 ⚡️[server]: Server is running at https://localhost:8000
 ```
+
+file tsconfig.json :
+
+```json
+{
+  "compilerOptions": {
+    "lib": ["es2015"],
+    "module": "commonjs",
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "rootDir": "./",
+    "esModuleInterop": true,
+    "strict": true,
+    "target": "es2015"
+  },
+  "include": [
+    "src"
+  ]
+}
+```
+
+tslint.json
+```json
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "semicolon": false,
+    "trailing-comma": false
+  }
+}
+```
+
