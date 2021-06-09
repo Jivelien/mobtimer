@@ -56,7 +56,6 @@ file tsconfig.json :
     "strict": true,
     "rootDir": "./",
     "esModuleInterop": true,
-    "strict": true,
     "target": "es2015"
   },
   "include": [
