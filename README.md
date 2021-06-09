@@ -30,7 +30,7 @@ En utilisant cette séquence de commandes :
 npm init
 npm install -g npm@7.15.1
 npm install --save-dev typescript tslint @types/node
-subl tslint.json
+subl tsconfig.json
 subl tslint.json
 mkdir src
 subl src/index.ts
