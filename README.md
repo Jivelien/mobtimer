@@ -78,3 +78,11 @@ tslint.json
 }
 ```
 
+## TDD with typescript
+- https://jestjs.io/docs/getting-started
+
+- https://basarat.gitbook.io/typescript/intro-1/jest
+
+```
+npm install jest @types/jest ts-jest -D
+```
