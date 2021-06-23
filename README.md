@@ -1,5 +1,11 @@
 # mobtimer
 
+## TODO
+problème transpiler les tests.
+Erreur sur le test en typescript, il n'est pas transpilé.
+nous n'avons pas essayer la commande ts... et ensuite jest
+
+
 ## installation de nodejs 
 
 ```bash
