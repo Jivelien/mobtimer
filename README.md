@@ -84,6 +84,45 @@ tslint.json
 }
 ```
 
+
+## TDD & Typescript
+
+Pour installer le framework de test : jest nous avons utilisé la resource suivante 
+https://basarat.gitbook.io/typescript/intro-1/jest
+
+Il faut donc installer jest via cette commande :
+
+```bash 
+npm i jest @types/jest ts-jest typescript -D
+```
+
+
+Ensuite configurer jest avec ce fichier de configuration `jest.config.js` :
+
+```javascript
+module.exports = {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "testMatch": [
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)+(spec|test).+(ts|tsx|js)"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+}
+```
+
+Ce fichier permet de lancer des test écrit en typescript en faisant usage la commande `ts-jest`
+Il va chercher les tests en partant du répertoire `src`
+
+Pour lancer les tests utiliser la commande :
+
+```bash
+npx jest
+```
+
 ## TDD with typescript
 - https://jestjs.io/docs/getting-started
 
