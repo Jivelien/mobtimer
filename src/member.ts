@@ -1,13 +1,13 @@
-class Member {
+export class Member {
     lastname: string;
-  
+
     constructor(lastname: string) {
         this.lastname = lastname;
     }
-  
-    getLastname() {
-        return "X"
-    }
-  }
 
-export {Member}
+    getLastname() {
+        return this.lastname;
+    }
+}
+
+
