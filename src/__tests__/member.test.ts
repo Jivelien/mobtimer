@@ -1,4 +1,6 @@
+import Member from '../member'
+
 test('X', () => {
-    let aMember = Member(lastname="Julien");
-    expect(aMember.yourName()).toBe("Julien");
+    let aMember = new Member("Julien");
+    expect(aMember.getLastname()).toBe("Julien");
 });
