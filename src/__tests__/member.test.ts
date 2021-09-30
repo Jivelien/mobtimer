@@ -1,7 +1,7 @@
 import {Member, ListMembers} from '../member'
 
 test('Create a member with lastname', () => {
-    let aMember = new Member("Julien");
+    let aMember: Member = new Member("Julien");
     expect(aMember.getLastname()).toBe("Julien");
 });
 
