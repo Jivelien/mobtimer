@@ -10,4 +10,16 @@ export class Member {
     }
 }
 
+export class ListMembers {
+    member?: Member;
+
+    add(member: Member) {
+        return this.member = member;
+    }
+
+    current() {
+        return this.member;
+    }
+}
+
 
