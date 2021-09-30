@@ -6,14 +6,26 @@ test('Create a member with lastname', () => {
 });
 
 
-
-test('TODO', () => {
+test('Retrieve current member from list of members', () => {
     let members = new ListMembers();
-    let aMember = new Member("Julien");
+    let expectedMember = new Member("Julien");
 
-    members.add(aMember);
+    members.add(expectedMember);
 
     let currentMember = members.current()
 
-    expect(currentMember).toBe(aMember);
+    expect(currentMember).toBe(expectedMember);
+});
+
+test('Retrieve current member from list of multple members', () => {
+    let members = new ListMembers();
+    let firstMember = new Member("Anthony");
+    let secondMember = new Member("Julien");
+
+    members.add(firstMember);
+    members.add(secondMember);
+
+    let currentMember = members.current()
+
+    expect(currentMember).toBe(firstMember);
 });
