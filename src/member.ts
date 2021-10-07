@@ -1,5 +1,6 @@
 export class Member {
     lastname: string;
+    next?: Member;
 
     constructor(lastname: string) {
         this.lastname = lastname;
@@ -11,14 +12,26 @@ export class Member {
 }
 
 export class ListMembers {
-    private member?: Member;
+    private firstmember?: Member;
 
     add(member: Member) {
-        return this.member = member;
+        if (this.firstmember == null) {
+            this.firstmember = member;
+        }
+        else {
+            let currentMember = this.firstmember
+
+            while (currentMember != null) {
+                currentMember = currentMember.next();
+            };
+
+            currentMember.next = member
+        }
+        
     }
 
     current() {
-        return this.member;
+        return this.firstmember;
     }
 }
 
