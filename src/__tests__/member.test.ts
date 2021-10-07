@@ -10,7 +10,7 @@ test('Retrieve current member from list of members', () => {
     let members = new ListMembers();
     let expectedMember = new Member("Julien");
 
-    members.add(expectedMember);
+    members.add_at_last_postion(expectedMember);
 
     let currentMember = members.current()
 
@@ -22,8 +22,8 @@ test('Retrieve current member from list of multple members', () => {
     let firstMember = new Member("Anthony");
     let secondMember = new Member("Julien");
 
-    members.add(firstMember);
-    members.add(secondMember);
+    members.add_at_last_postion(firstMember);
+    members.add_at_last_postion(secondMember);
 
     let currentMember = members.current()
 

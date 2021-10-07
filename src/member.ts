@@ -14,7 +14,7 @@ export class Member {
 export class ListMembers {
     private firstmember?: Member;
 
-    add(member: Member) {
+    add_at_last_postion(member: Member) {
         let lastMember = this.get_last();
         if (lastMember == null) {
             this.firstmember = member
@@ -29,7 +29,6 @@ export class ListMembers {
             return null;
         }
         else {
-
             let currentMember = this.firstmember;
 
             while (currentMember.next != null) {
@@ -39,6 +38,8 @@ export class ListMembers {
             return currentMember;
         }
     }
+
+    // TODO : add_at_first_position
 
     current() {
         return this.firstmember;
