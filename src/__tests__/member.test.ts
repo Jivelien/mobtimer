@@ -29,3 +29,41 @@ test('Retrieve current member from list of multple members', () => {
 
     expect(currentMember).toBe(firstMember);
 });
+
+test('add at first position', () => {
+    let members = new ListMembers();
+    let firstMember = new Member("Anthony");
+
+    members.add_at_first_postion(firstMember);
+
+    let currentMember = members.current2()
+
+    expect(currentMember).toBe(firstMember);
+});
+
+test('Retrieve current member from list of multple members', () => {
+    let members = new ListMembers();
+    let firstAddedMember = new Member("Anthony");
+    let secondAddedMember = new Member("Julien");
+
+    members.add_at_first_postion(firstAddedMember);
+    members.add_at_first_postion(secondAddedMember);
+
+    let currentMember = members.current2()
+
+    expect(currentMember).toBe(secondAddedMember);
+});
+
+
+test('Retrieve next member from list of multple members', () => {
+    let members = new ListMembers();
+    let firstAddedMember = new Member("Anthony");
+    let secondAddedMember = new Member("Julien");
+
+    members.add_at_first_postion(firstAddedMember);
+    members.add_at_first_postion(secondAddedMember);
+
+    let nextMember = members.next()
+
+    expect(nextMember).toBe(firstAddedMember);
+});

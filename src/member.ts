@@ -13,6 +13,13 @@ export class Member {
 
 export class ListMembers {
     private firstmember?: Member;
+    private firstmember2 : Member;
+    private currentMember : Member;
+
+    constructor() {
+        this.firstmember2 = new Member("Sentinelle")
+        this.currentMember = this.firstmember2;
+    }
 
     add_at_last_postion(member: Member) {
         let lastMember = this.get_last();
@@ -20,8 +27,12 @@ export class ListMembers {
             this.firstmember = member
             return
         }
-        lastMember.next = member
-        
+        lastMember.next = member 
+    }
+
+    add_at_first_postion(member: Member) {
+        member.next = this.firstmember2
+        this.firstmember2 = member
     }
 
     private get_last()  {
@@ -44,6 +55,27 @@ export class ListMembers {
     current() {
         return this.firstmember;
     }
+
+    current2() : Member {
+        return this.currentMember;
+    }
+
+    next() {
+        if (this.current2().next == null) {}
+        // TODO next ?
+        return this.currentMember ;
+    }
+
+    // next2() {
+    //     let actualCurrent = this.current2() 
+    //     if ( actualCurrent != null) {
+    //         this.currentMember = actualCurrent.next
+    //         return this.currentMember ;
+    //     }
+    //     else {
+    //         return null;
+    //     }
+    // }
 }
 
 
