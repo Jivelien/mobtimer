@@ -56,7 +56,7 @@ test('Retrieve current member from list of multple members', () => {
 
 
 
-test('Retrieve next member from list of multple members', () => {
+test.skip('Retrieve next member from list of multple members', () => {
     let members = new ListMembers();
     let firstAddedMember = new Member("Anthony");
     let secondAddedMember = new Member("Julien");
