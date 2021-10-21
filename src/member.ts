@@ -14,10 +14,12 @@ export class Member {
 export class ListMembers {
     private firstmember?: Member;
     private firstmember2 : Member;
+    private readonly sentinelle : Member;
     private currentMember : Member;
 
     constructor() {
-        this.firstmember2 = new Member("Sentinelle")
+        this.sentinelle = new Member("Sentinelle")
+        this.firstmember2 = this.sentinelle;
         this.currentMember = this.firstmember2;
     }
 
@@ -30,11 +32,15 @@ export class ListMembers {
         lastMember.next = member 
     }
 
+    private is_empty_list(): boolean {
+        return this.currentMember == this.sentinelle
+    }
+
     add_at_first_postion(member: Member) {
 
         member.next = this.firstmember2
         this.firstmember2 = member
-        if (this.currentMember == new Member("Sentinelle"))
+        if (this.is_empty_list())
             this.currentMember = this.firstmember2
     }
 
