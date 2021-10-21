@@ -6,29 +6,29 @@ test('Create a member with lastname', () => {
 });
 
 
-test('Retrieve current member from list of members', () => {
-    let members = new ListMembers();
-    let expectedMember = new Member("Julien");
-
-    members.add_at_last_postion(expectedMember);
-
-    let currentMember = members.current()
-
-    expect(currentMember).toBe(expectedMember);
-});
-
-test('Retrieve current member from list of multple members', () => {
-    let members = new ListMembers();
-    let firstMember = new Member("Anthony");
-    let secondMember = new Member("Julien");
-
-    members.add_at_last_postion(firstMember);
-    members.add_at_last_postion(secondMember);
-
-    let currentMember = members.current()
-
-    expect(currentMember).toBe(firstMember);
-});
+// test('Retrieve current member from list of members', () => {
+//     let members = new ListMembers();
+//     let expectedMember = new Member("Julien");
+//
+//     members.add_at_last_postion(expectedMember);
+//
+//     let currentMember = members.current()
+//
+//     expect(currentMember).toBe(expectedMember);
+// });
+//
+// test('Retrieve current member from list of multple members', () => {
+//     let members = new ListMembers();
+//     let firstMember = new Member("Anthony");
+//     let secondMember = new Member("Julien");
+//
+//     members.add_at_last_postion(firstMember);
+//     members.add_at_last_postion(secondMember);
+//
+//     let currentMember = members.current()
+//
+//     expect(currentMember).toBe(firstMember);
+// });
 
 test('add at first position', () => {
     let members = new ListMembers();
@@ -51,8 +51,9 @@ test('Retrieve current member from list of multple members', () => {
 
     let currentMember = members.current2()
 
-    expect(currentMember).toBe(secondAddedMember);
+    expect(currentMember).toBe(firstAddedMember);
 });
+
 
 
 test('Retrieve next member from list of multple members', () => {
@@ -65,5 +66,5 @@ test('Retrieve next member from list of multple members', () => {
 
     let nextMember = members.next()
 
-    expect(nextMember).toBe(firstAddedMember);
+    expect(nextMember).toBe(secondAddedMember);
 });
