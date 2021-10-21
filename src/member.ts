@@ -31,8 +31,11 @@ export class ListMembers {
     }
 
     add_at_first_postion(member: Member) {
+
         member.next = this.firstmember2
         this.firstmember2 = member
+        if (this.currentMember == new Member("Sentinelle"))
+            this.currentMember = this.firstmember2
     }
 
     private get_last()  {
