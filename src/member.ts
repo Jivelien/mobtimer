@@ -18,6 +18,8 @@ export class Member {
         this.next = member;
     }
 
+
+
 }
 
 export class ListMembers {
@@ -54,10 +56,7 @@ export class ListMembers {
     }
 
     next() {
-        if (this.current2().getNext() == null) {
-        }
-        // TODO next ?
-        return this.currentMember;
+        return this.currentMember.getNext();
     }
 
 }

@@ -58,7 +58,8 @@ test('Compare equality between members', () => {
     let firstAddedMember = new Member("Anthony");
     let secondAddedMember = new Member("Anthony");
 
-    expect(firstAddedMember).toBe(secondAddedMember);
+    secondAddedMember.setNext(new Member("Strange things"))
+    expect(firstAddedMember).toEqual(secondAddedMember);
 });
 
 test.skip('Retrieve next member from list of multple members', () => {
