@@ -63,17 +63,20 @@ test('Compare equality between members', () => {
 });
 
 test('Retrieve next member from list of multple members', () => {
+    // Test à revoir ???
+    // Test faux ?
+    
     let members = new ListMembers();
-    let firstAddedMember = new Member("Anthony");
-    let secondAddedMember = new Member("Julien");
+    let AnthonyMember = new Member("Anthony");
+    let JulienMember = new Member("Julien");
 
-    members.add_at_first_postion(firstAddedMember);
-    members.add_at_first_postion(secondAddedMember);
+    members.add_at_first_postion(AnthonyMember);
+    members.add_at_first_postion(JulienMember);
 
     let nextMember = members.next()
 
-    var expected = secondAddedMember.getLastname()
-    var output = nextMember.getLastname()
+    let expected = "Anthony"
+    let output = nextMember.getLastname()
 
     expect(expected).toEqual(output);
 });
