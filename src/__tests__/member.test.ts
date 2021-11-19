@@ -54,7 +54,12 @@ test('Retrieve current member from list of multple members', () => {
     expect(currentMember).toBe(firstAddedMember);
 });
 
+test('Compare equality between members', () => {
+    let firstAddedMember = new Member("Anthony");
+    let secondAddedMember = new Member("Anthony");
 
+    expect(firstAddedMember).toBe(secondAddedMember);
+});
 
 test.skip('Retrieve next member from list of multple members', () => {
     let members = new ListMembers();
