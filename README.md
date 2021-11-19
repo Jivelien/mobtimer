@@ -133,3 +133,7 @@ npx jest
 ```
 npm install jest @types/jest ts-jest -D
 ```
+
+
+## resource jest comparaison / équalité toBe toEqual
+https://dev.to/thejaredwilcurt/why-you-should-never-use-tobe-in-jest-48ca
