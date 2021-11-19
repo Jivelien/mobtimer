@@ -55,14 +55,14 @@ test('Retrieve current member from list of multple members', () => {
 });
 
 test('Compare equality between members', () => {
-    let firstAddedMember = new Member("Anthony");
-    let secondAddedMember = new Member("Anthony");
+    let firstMember = new Member("Anthony");
+    let secondMember = new Member("Anthony");
 
-    secondAddedMember.setNext(new Member("Strange things"))
-    expect(firstAddedMember).toEqual(secondAddedMember);
+    secondMember.setNext(new Member("Strange things"))
+    expect(firstMember.equals(secondMember)).toBe(true);
 });
 
-test.skip('Retrieve next member from list of multple members', () => {
+test('Retrieve next member from list of multple members', () => {
     let members = new ListMembers();
     let firstAddedMember = new Member("Anthony");
     let secondAddedMember = new Member("Julien");
@@ -72,5 +72,8 @@ test.skip('Retrieve next member from list of multple members', () => {
 
     let nextMember = members.next()
 
-    expect(nextMember).toBe(secondAddedMember);
+    var expected = secondAddedMember.getLastname()
+    var output = nextMember.getLastname()
+
+    expect(expected).toEqual(output);
 });

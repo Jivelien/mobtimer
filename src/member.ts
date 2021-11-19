@@ -1,4 +1,4 @@
-export class Member {
+export class Member  {
     lastname: string;
     private next?: Member;
 
@@ -18,6 +18,9 @@ export class Member {
         this.next = member;
     }
 
+    public equals(otherMember: Member): boolean {
+        return this.getLastname() == otherMember.getLastname();
+      }
 
 
 }
